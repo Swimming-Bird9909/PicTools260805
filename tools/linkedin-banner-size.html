@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Banner Size — Free Resizer | ImageFitly</title>
+  <meta name="description" content="Free LinkedIn banner resizer. Resize cover photos to LinkedIn's recommended 1584×396 pixels for personal and company pages." />
+  <meta name="keywords" content="linkedin banner size, linkedin cover photo size, linkedin header dimensions, linkedin profile banner" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://imagefitly.com/tools/linkedin-banner-size.html" />
+  <meta property="og:title" content="LinkedIn Banner Size — Free Resizer | ImageFitly" />
+  <meta property="og:description" content="Free LinkedIn banner resizer. Resize cover photos to LinkedIn's recommended 1584×396 pixels for personal and company pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://imagefitly.com/tools/linkedin-banner-size.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial' font-weight='900'%3EIF%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LinkedIn Banner Resizer",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the LinkedIn banner size?",
+        "acceptedAnswer": { "@type": "Answer", "text": "1584×396 pixels for personal profiles, 1128×191 for company pages. Use our presets to get the exact right size." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my LinkedIn banner cropped on mobile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "LinkedIn crops differently on mobile. Keep important content in the center of the image to ensure it shows on all devices." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the same banner for personal and company?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, the aspect ratios are different (4:1 vs 5.9:1). Use the appropriate preset for each." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">IF</span>
+        <span>ImageFitly</span>
+      </a>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#tools">All Tools</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../index.html#start" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tool-hero">
+  <div class="container">
+    <h1>LinkedIn Banner Resizer</h1>
+    <p>Resize LinkedIn cover photos to 1584×396. Personal profile or company page — perfect every time.</p>
+    <div class="tool-meta">
+      <span>⚡ 100% Free</span>
+      <span>🔒 100% Private</span>
+      <span>📱 Works on Mobile</span>
+      <span>🚀 No Sign-up</span>
+    </div>
+  </div>
+</section>
+
+<section class="tool-app">
+  <div class="container">
+    <div class="app-card">
+      <div class="dropzone" id="dropzone">
+        <span class="dropzone-icon">📤</span>
+        <h3>Drop your image here</h3>
+        <p>or click to browse — JPG, PNG, WEBP up to 20MB</p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="editor" id="editor">
+        <div class="editor-grid">
+          <div class="preview-wrap">
+            <img id="previewImg" alt="Preview" />
+          </div>
+          <div class="controls">
+            <h4>Quick Presets</h4>
+            <div class="preset-grid" id="presetGrid">
+              <button class="preset-btn active" data-idx="0">Personal Profile<small>1584×396px</small></button>
+            <button class="preset-btn" data-idx="1">Company Page<small>1128×191px</small></button>
+            <button class="preset-btn" data-idx="2">LinkedIn Post<small>1200×627px</small></button>
+            <button class="preset-btn" data-idx="3">Custom Size<small>1584×396px</small></button>
+            </div>
+
+            <h4>Custom Dimensions</h4>
+            <div class="control-group">
+              <div class="input-row">
+                <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
+                <input type="number" id="heightInput" min="1" max="8000" placeholder="Height" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label>Fit Mode</label>
+              <select id="fitSelect">
+                <option value="contain">Contain (add padding)</option>
+                <option value="cover">Cover (crop to fit)</option>
+                <option value="fill">Fill (stretch)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label>Background Color</label>
+              <input type="color" id="bgColor" value="#ffffff" style="width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer;" />
+            </div>
+
+            <h4>Output Settings</h4>
+            <div class="control-group">
+              <label>Format</label>
+              <select id="formatSelect">
+                <option value="image/jpeg">JPG (smallest)</option>
+                <option value="image/png">PNG (lossless)</option>
+                <option value="image/webp">WEBP (modern)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label>Quality</label>
+              <div class="range-row">
+                <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.9" />
+                <span class="val" id="qualityVal">90%</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" id="processBtn" type="button">Apply Changes</button>
+              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled>Download</button>
+              
+              <button class="btn btn-secondary" id="resetBtn" type="button">Upload New</button>
+            </div>
+            <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);" id="fileInfo"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content section for SEO -->
+<section style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="prose">
+      <h2>About the LinkedIn Banner Resizer</h2>
+      <p>Your LinkedIn banner is the first thing visitors see on your profile. The recommended size is 1584×396 pixels for personal profiles. For company pages, use 1128×191. Our tool resizes your banner to the perfect dimensions with mobile-safe area considerations.</p>
+
+      <h2>Recommended Sizes</h2>
+      <table>
+        <tr><th>Type</th><th>Size (px)</th><th>Aspect Ratio</th><th>Max File Size</th></tr>
+          <tr><td>Personal Profile</td><td>1584 × 396</td><td>4:1</td><td>8 MB</td></tr>
+          <tr><td>Company Page</td><td>1128 × 191</td><td>5.9:1</td><td>2 MB</td></tr>
+          <tr><td>LinkedIn Post</td><td>1200 × 627</td><td>1.91:1</td><td>5 MB</td></tr>
+          <tr><td>Career Page</td><td>1128 × 376</td><td>3:1</td><td>2 MB</td></tr>
+      </table>
+
+      <h2>Why use ImageFitly?</h2>
+      <ul>
+        <li><strong>100% Free</strong> — No hidden costs, no watermarks, no sign-up required.</li>
+        <li><strong>Browser-based</strong> — Your images are processed locally. Nothing is uploaded to any server.</li>
+        <li><strong>Fast</strong> — Process images in seconds using your device's native speed.</li>
+        <li><strong>Multiple formats</strong> — Export to JPG, PNG, or WEBP with adjustable quality.</li>
+        <li><strong>Custom dimensions</strong> — Use presets or enter any custom width and height.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      
+      <div class="faq-item open">
+        <button class="faq-q">What is the LinkedIn banner size?</button>
+        <div class="faq-a"><p>1584×396 pixels for personal profiles, 1128×191 for company pages. Use our presets to get the exact right size.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">Why is my LinkedIn banner cropped on mobile?</button>
+        <div class="faq-a"><p>LinkedIn crops differently on mobile. Keep important content in the center of the image to ensure it shows on all devices.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">Can I use the same banner for personal and company?</button>
+        <div class="faq-a"><p>No, the aspect ratios are different (4:1 vs 5.9:1). Use the appropriate preset for each.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related tools -->
+<section style="background: var(--bg-soft); padding: 60px 0;">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">More image tools</h2>
+    </div>
+    <div class="tool-grid">
+      <a href="amazon-image-size-converter.html" class="tool-card">
+        <div class="tool-icon">🛒</div>
+        <h3>Amazon Resizer</h3>
+        <p>2000×2000 px main images.</p>
+      </a>
+      <a href="shopify-image-optimizer.html" class="tool-card">
+        <div class="tool-icon">🛍️</div>
+        <h3>Shopify Optimizer</h3>
+        <p>Faster store loading.</p>
+      </a>
+      <a href="instagram-post-size.html" class="tool-card">
+        <div class="tool-icon">📸</div>
+        <h3>Instagram Size</h3>
+        <p>Square, portrait, story.</p>
+      </a>
+      <a href="youtube-thumbnail-size.html" class="tool-card">
+        <div class="tool-icon">▶️</div>
+        <h3>YouTube Thumbnail</h3>
+        <p>1280×720 px thumbnails.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo-icon">IF</span>
+          <span>ImageFitly</span>
+        </div>
+        <p>The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
+      </div>
+      <div>
+        <h5>E-commerce</h5>
+        <ul>
+          <li><a href="amazon-image-size-converter.html">Amazon</a></li>
+          <li><a href="shopify-image-optimizer.html">Shopify</a></li>
+          <li><a href="etsy-photo-resize.html">Etsy</a></li>
+          <li><a href="ebay-image-compressor.html">eBay</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Social Media</h5>
+        <ul>
+          <li><a href="instagram-post-size.html">Instagram</a></li>
+          <li><a href="youtube-thumbnail-size.html">YouTube</a></li>
+          <li><a href="linkedin-banner-size.html">LinkedIn</a></li>
+          <li><a href="twitter-header-size.html">Twitter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="../terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ImageFitly. All rights reserved.</span>
+      <span>Made with ❤️ for creators worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/image-engine.js"></script>
+<script src="../js/tool-page.js"></script>
+<script>
+  const toolConfig = {
+    presets: [{"label":"Personal Profile","w":1584,"h":396,"fit":"contain"},{"label":"Company Page","w":1128,"h":191,"fit":"contain"},{"label":"LinkedIn Post","w":1200,"h":627,"fit":"contain"},{"label":"Custom Size","w":1584,"h":396,"fit":"contain"}],
+    defaultPreset: 0,
+    defaultFormat: 'image/jpeg',
+    defaultQuality: 0.9,
+    showBackgroundRemover: false,
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    new ToolPage(toolConfig);
+    // Override preset click to set width/height
+    document.querySelectorAll('.preset-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.idx);
+        const p = toolConfig.presets[idx];
+        if (p.w) {
+          document.getElementById('widthInput').value = p.w;
+          document.getElementById('heightInput').value = p.h;
+          document.getElementById('fitSelect').value = p.fit;
+        }
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Image Size Converter — Free Online | ImageFitly</title>
+  <meta name="description" content="Free online Amazon image size converter. Resize product photos to 2000×2000px, meet Amazon's image requirements, and optimize for higher conversion." />
+  <meta name="keywords" content="amazon image size converter, amazon product photo size, amazon main image dimensions, amazon listing image" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://imagefitly.com/tools/amazon-image-size-converter.html" />
+  <meta property="og:title" content="Amazon Image Size Converter — Free Online | ImageFitly" />
+  <meta property="og:description" content="Free online Amazon image size converter. Resize product photos to 2000×2000px, meet Amazon's image requirements, and optimize for higher conversion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://imagefitly.com/tools/amazon-image-size-converter.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial' font-weight='900'%3EIF%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Amazon Image Size Converter",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best Amazon product image size?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Amazon recommends 2000×2000 pixels for main product images. This size enables the zoom feature and displays the product clearly on all devices." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Amazon require a white background?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The main product image must have a pure white background (RGB 255,255,255). Gallery images can have lifestyle backgrounds." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 85% zoom requirement on Amazon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Amazon requires the product to fill at least 85% of the image frame. Our tool automatically adds white padding to meet this requirement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I upload PNG to Amazon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, but JPG is preferred for smaller file size. Amazon supports both, and our tool lets you choose your preferred format." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum file size for Amazon images?",
+        "acceptedAnswer": { "@type": "Answer", "text": "10 MB per image. Use our quality slider to compress your images below this limit." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">IF</span>
+        <span>ImageFitly</span>
+      </a>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#tools">All Tools</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../index.html#start" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tool-hero">
+  <div class="container">
+    <h1>Amazon Image Size Converter</h1>
+    <p>Resize product photos to Amazon's recommended 2000×2000px instantly. Meet Amazon's 85% zoom requirement and boost your listing conversion.</p>
+    <div class="tool-meta">
+      <span>⚡ 100% Free</span>
+      <span>🔒 100% Private</span>
+      <span>📱 Works on Mobile</span>
+      <span>🚀 No Sign-up</span>
+    </div>
+  </div>
+</section>
+
+<section class="tool-app">
+  <div class="container">
+    <div class="app-card">
+      <div class="dropzone" id="dropzone">
+        <span class="dropzone-icon">📤</span>
+        <h3>Drop your image here</h3>
+        <p>or click to browse — JPG, PNG, WEBP up to 20MB</p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="editor" id="editor">
+        <div class="editor-grid">
+          <div class="preview-wrap">
+            <img id="previewImg" alt="Preview" />
+          </div>
+          <div class="controls">
+            <h4>Quick Presets</h4>
+            <div class="preset-grid" id="presetGrid">
+              <button class="preset-btn active" data-idx="0">Amazon Main<small>2000×2000px</small></button>
+            <button class="preset-btn" data-idx="1">Amazon Gallery<small>1500×1500px</small></button>
+            <button class="preset-btn" data-idx="2">Amazon Thumbnail<small>500×500px</small></button>
+            <button class="preset-btn" data-idx="3">Custom Size<small>1000×1000px</small></button>
+            </div>
+
+            <h4>Custom Dimensions</h4>
+            <div class="control-group">
+              <div class="input-row">
+                <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
+                <input type="number" id="heightInput" min="1" max="8000" placeholder="Height" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label>Fit Mode</label>
+              <select id="fitSelect">
+                <option value="contain">Contain (add padding)</option>
+                <option value="cover">Cover (crop to fit)</option>
+                <option value="fill">Fill (stretch)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label>Background Color</label>
+              <input type="color" id="bgColor" value="#ffffff" style="width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer;" />
+            </div>
+
+            <h4>Output Settings</h4>
+            <div class="control-group">
+              <label>Format</label>
+              <select id="formatSelect">
+                <option value="image/jpeg">JPG (smallest)</option>
+                <option value="image/png">PNG (lossless)</option>
+                <option value="image/webp">WEBP (modern)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label>Quality</label>
+              <div class="range-row">
+                <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.9" />
+                <span class="val" id="qualityVal">90%</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" id="processBtn" type="button">Apply Changes</button>
+              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled>Download</button>
+              
+              <button class="btn btn-secondary" id="resetBtn" type="button">Upload New</button>
+            </div>
+            <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);" id="fileInfo"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content section for SEO -->
+<section style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="prose">
+      <h2>About the Amazon Image Size Converter</h2>
+      <p>Amazon has strict product image requirements. Main images must be at least 1000×1000px to enable the zoom feature, but 2000×2000px is the recommended size for best results. Images must show the actual product on a pure white background (RGB 255,255,255). Our Amazon Image Size Converter automatically meets all these requirements in one click.</p>
+
+      <h2>Recommended Sizes</h2>
+      <table>
+        <tr><th>Image Type</th><th>Recommended Size</th><th>Format</th><th>Max File Size</th></tr>
+          <tr><td>Main Image</td><td>2000 × 2000 px (1:1)</td><td>JPG/PNG</td><td>10 MB</td></tr>
+          <tr><td>Gallery Image</td><td>1500 × 1500 px</td><td>JPG/PNG</td><td>10 MB</td></tr>
+          <tr><td>Thumbnail</td><td>500 × 500 px</td><td>JPG/PNG</td><td>10 MB</td></tr>
+          <tr><td>Zoom Requirement</td><td>85% of frame filled</td><td>—</td><td>—</td></tr>
+      </table>
+
+      <h2>Why use ImageFitly?</h2>
+      <ul>
+        <li><strong>100% Free</strong> — No hidden costs, no watermarks, no sign-up required.</li>
+        <li><strong>Browser-based</strong> — Your images are processed locally. Nothing is uploaded to any server.</li>
+        <li><strong>Fast</strong> — Process images in seconds using your device's native speed.</li>
+        <li><strong>Multiple formats</strong> — Export to JPG, PNG, or WEBP with adjustable quality.</li>
+        <li><strong>Custom dimensions</strong> — Use presets or enter any custom width and height.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      
+      <div class="faq-item open">
+        <button class="faq-q">What is the best Amazon product image size?</button>
+        <div class="faq-a"><p>Amazon recommends 2000×2000 pixels for main product images. This size enables the zoom feature and displays the product clearly on all devices.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">Does Amazon require a white background?</button>
+        <div class="faq-a"><p>Yes. The main product image must have a pure white background (RGB 255,255,255). Gallery images can have lifestyle backgrounds.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">What is the 85% zoom requirement on Amazon?</button>
+        <div class="faq-a"><p>Amazon requires the product to fill at least 85% of the image frame. Our tool automatically adds white padding to meet this requirement.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">Can I upload PNG to Amazon?</button>
+        <div class="faq-a"><p>Yes, but JPG is preferred for smaller file size. Amazon supports both, and our tool lets you choose your preferred format.</p></div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-q">What is the maximum file size for Amazon images?</button>
+        <div class="faq-a"><p>10 MB per image. Use our quality slider to compress your images below this limit.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related tools -->
+<section style="background: var(--bg-soft); padding: 60px 0;">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">More image tools</h2>
+    </div>
+    <div class="tool-grid">
+      <a href="amazon-image-size-converter.html" class="tool-card">
+        <div class="tool-icon">🛒</div>
+        <h3>Amazon Resizer</h3>
+        <p>2000×2000 px main images.</p>
+      </a>
+      <a href="shopify-image-optimizer.html" class="tool-card">
+        <div class="tool-icon">🛍️</div>
+        <h3>Shopify Optimizer</h3>
+        <p>Faster store loading.</p>
+      </a>
+      <a href="instagram-post-size.html" class="tool-card">
+        <div class="tool-icon">📸</div>
+        <h3>Instagram Size</h3>
+        <p>Square, portrait, story.</p>
+      </a>
+      <a href="youtube-thumbnail-size.html" class="tool-card">
+        <div class="tool-icon">▶️</div>
+        <h3>YouTube Thumbnail</h3>
+        <p>1280×720 px thumbnails.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo-icon">IF</span>
+          <span>ImageFitly</span>
+        </div>
+        <p>The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
+      </div>
+      <div>
+        <h5>E-commerce</h5>
+        <ul>
+          <li><a href="amazon-image-size-converter.html">Amazon</a></li>
+          <li><a href="shopify-image-optimizer.html">Shopify</a></li>
+          <li><a href="etsy-photo-resize.html">Etsy</a></li>
+          <li><a href="ebay-image-compressor.html">eBay</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Social Media</h5>
+        <ul>
+          <li><a href="instagram-post-size.html">Instagram</a></li>
+          <li><a href="youtube-thumbnail-size.html">YouTube</a></li>
+          <li><a href="linkedin-banner-size.html">LinkedIn</a></li>
+          <li><a href="twitter-header-size.html">Twitter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="../terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ImageFitly. All rights reserved.</span>
+      <span>Made with ❤️ for creators worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/image-engine.js"></script>
+<script src="../js/tool-page.js"></script>
+<script>
+  const toolConfig = {
+    presets: [{"label":"Amazon Main","w":2000,"h":2000,"fit":"contain"},{"label":"Amazon Gallery","w":1500,"h":1500,"fit":"contain"},{"label":"Amazon Thumbnail","w":500,"h":500,"fit":"contain"},{"label":"Custom Size","w":1000,"h":1000,"fit":"contain"}],
+    defaultPreset: 0,
+    defaultFormat: 'image/jpeg',
+    defaultQuality: 0.9,
+    showBackgroundRemover: false,
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    new ToolPage(toolConfig);
+    // Override preset click to set width/height
+    document.querySelectorAll('.preset-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.idx);
+        const p = toolConfig.presets[idx];
+        if (p.w) {
+          document.getElementById('widthInput').value = p.w;
+          document.getElementById('heightInput').value = p.h;
+          document.getElementById('fitSelect').value = p.fit;
+        }
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

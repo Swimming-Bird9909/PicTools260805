@@ -1,0 +1,25 @@
+# Screenshots
+screenshot-*.png
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Generated scripts (keep only if needed)
+generate-tools.js
+generate-blog.js
+
+# Temp deploy files
+DEPLOY.md
+CLOUDFLARE-DEPLOY.md
+QUICKSTART.html
+start.sh
+start.bat
+
+# Node
+node_modules/
+
+# IDE
+.workbuddy/
+.vscode/
+.idea/

@@ -1,0 +1,8 @@
+{
+  "name": "wezzik-tools",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

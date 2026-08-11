@@ -125,9 +125,13 @@ class ToolPage {
       this.bgRemoveBtn.addEventListener("click", () => this.runBgRemoval());
     }
 
-    // Click the preview image to replace it with another file
+    // Click the preview image / container to replace it with another file
+    // Bind on both container AND image for maximum compatibility
     if (this.previewCanvasBox) {
       this.previewCanvasBox.addEventListener("click", () => this.openFilePicker());
+    }
+    if (this.previewImg) {
+      this.previewImg.addEventListener("click", () => this.openFilePicker());
     }
     // Persistent "click image to replace" link below the preview
     if (this.replaceLink) {

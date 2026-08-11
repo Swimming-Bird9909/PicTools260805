@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Post Size — Free Resizer | ImageFitly</title>
-  <meta name="description" content="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." />
+  <title data-zh="Instagram 帖子尺寸转换器 | ImageFitly 免费在线">Instagram Post Size — Free Resizer | ImageFitly</title>
+  <meta name="description" content="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." data-zh="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." />
   <meta name="keywords" content="instagram post size, instagram image resize, instagram story size, instagram square size" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://imagefitly.com/tools/instagram-post-size.html" />
-  <meta property="og:title" content="Instagram Post Size — Free Resizer | ImageFitly" />
-  <meta property="og:description" content="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." />
+  <meta property="og:title" content="Instagram Post Size — Free Resizer | ImageFitly" data-zh="Instagram 帖子尺寸转换器 | ImageFitly" />
+  <meta property="og:description" content="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." data-zh="Free Instagram image resizer. Resize to Instagram square (1080×1080), portrait (1080×1350), story (1080×1920), and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://imagefitly.com/tools/instagram-post-size.html" />
   <link rel="stylesheet" href="../css/style.css" />
@@ -64,25 +64,29 @@
       </a>
       <button class="mobile-toggle" aria-label="Menu">☰</button>
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#tools">All Tools</a></li>
-        <li><a href="../blog/index.html">Blog</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#start" class="nav-cta">Get Started</a></li>
+        <li><a href="../index.html" data-zh="首页">Home</a></li>
+        <li><a href="../index.html#tools" data-zh="全部工具">All Tools</a></li>
+        <li><a href="../blog/index.html" data-zh="博客">Blog</a></li>
+        <li><a href="../about.html" data-zh="关于">About</a></li>
+        <li><a href="../index.html#start" class="nav-cta" data-zh="立即开始">Get Started</a></li>
       </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
     </nav>
   </div>
 </header>
 
 <section class="tool-hero">
   <div class="container">
-    <h1>Instagram Post Size Converter</h1>
-    <p>Resize images for Instagram posts, stories, and reels. Square, portrait, landscape — perfect dimensions every time.</p>
+    <h1 data-zh="Instagram 帖子尺寸转换器">Instagram Post Size Converter</h1>
+    <p data-zh="为 Instagram 帖子、故事和 Reels 调整尺寸。方形、竖图、横图——每次都恰到好处。">Resize images for Instagram posts, stories, and reels. Square, portrait, landscape — perfect dimensions every time.</p>
     <div class="tool-meta">
-      <span>⚡ 100% Free</span>
-      <span>🔒 100% Private</span>
-      <span>📱 Works on Mobile</span>
-      <span>🚀 No Sign-up</span>
+      <span data-zh="⚡ 100% 免费">⚡ 100% Free</span>
+      <span data-zh="🔒 100% 隐私">🔒 100% Private</span>
+      <span data-zh="📱 移动端可用">📱 Works on Mobile</span>
+      <span data-zh="🚀 无需注册">🚀 No Sign-up</span>
     </div>
   </div>
 </section>
@@ -92,27 +96,33 @@
     <div class="app-card">
       <div class="dropzone" id="dropzone">
         <span class="dropzone-icon">📤</span>
-        <h3>Drop your image here</h3>
-        <p>or click to browse — JPG, PNG, WEBP up to 20MB</p>
+        <h3 data-zh="将图片拖拽到此处">Drop your image here</h3>
+        <p data-zh="或点击选择文件 — 支持 JPG、PNG、WEBP，最大 20MB">or click to browse — JPG, PNG, WEBP up to 20MB</p>
         <input type="file" id="fileInput" accept="image/*" />
       </div>
 
       <div class="editor" id="editor">
         <div class="editor-grid">
-          <div class="preview-wrap">
-            <img id="previewImg" alt="Preview" />
+          <div class="preview-wrap" id="previewWrap">
+            <div class="preview-canvas-box" id="previewCanvasBox">
+              <img id="previewImg" alt="Preview" />
+            </div>
+            <div class="preview-meta">
+              <span class="preview-badge" id="previewBadge" data-zh="上传图片以预览">Upload an image to preview</span>
+              <span class="preview-zoom" id="previewZoom"></span>
+            </div>
           </div>
           <div class="controls">
-            <h4>Quick Presets</h4>
+            <h4 data-zh="快速预设">Quick Presets</h4>
             <div class="preset-grid" id="presetGrid">
-              <button class="preset-btn active" data-idx="0">Square (1:1)<small>1080×1080px</small></button>
-            <button class="preset-btn" data-idx="1">Portrait (4:5)<small>1080×1350px</small></button>
-            <button class="preset-btn" data-idx="2">Story (9:16)<small>1080×1920px</small></button>
-            <button class="preset-btn" data-idx="3">Landscape<small>1080×566px</small></button>
-            <button class="preset-btn" data-idx="4">Custom Size<small>1080×1080px</small></button>
+              <button class="preset-btn active" data-idx="0" data-en="Square (1:1)" data-zh="方形 (1:1)">Square (1:1)<small>1080×1080px</small></button>
+            <button class="preset-btn" data-idx="1" data-en="Portrait (4:5)" data-zh="竖图 (4:5)">Portrait (4:5)<small>1080×1350px</small></button>
+            <button class="preset-btn" data-idx="2" data-en="Story (9:16)" data-zh="故事 (9:16)">Story (9:16)<small>1080×1920px</small></button>
+            <button class="preset-btn" data-idx="3" data-en="Landscape" data-zh="横图">Landscape<small>1080×566px</small></button>
+            <button class="preset-btn" data-idx="4" data-en="Custom Size" data-zh="自定义尺寸">Custom Size<small>1080×1080px</small></button>
             </div>
 
-            <h4>Custom Dimensions</h4>
+            <h4 data-zh="自定义尺寸">Custom Dimensions</h4>
             <div class="control-group">
               <div class="input-row">
                 <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
@@ -121,31 +131,31 @@
             </div>
 
             <div class="control-group">
-              <label>Fit Mode</label>
+              <label data-zh="填充模式">Fit Mode</label>
               <select id="fitSelect">
-                <option value="contain">Contain (add padding)</option>
-                <option value="cover">Cover (crop to fit)</option>
-                <option value="fill">Fill (stretch)</option>
+                <option value="contain" data-zh="Contain（添加留白）">Contain (add padding)</option>
+                <option value="cover" data-zh="Cover（裁剪填满）">Cover (crop to fit)</option>
+                <option value="fill" data-zh="Fill（拉伸填满）">Fill (stretch)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Background Color</label>
+              <label data-zh="背景颜色">Background Color</label>
               <input type="color" id="bgColor" value="#ffffff" style="width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer;" />
             </div>
 
-            <h4>Output Settings</h4>
+            <h4 data-zh="输出设置">Output Settings</h4>
             <div class="control-group">
-              <label>Format</label>
+              <label data-zh="格式">Format</label>
               <select id="formatSelect">
-                <option value="image/jpeg">JPG (smallest)</option>
-                <option value="image/png">PNG (lossless)</option>
-                <option value="image/webp">WEBP (modern)</option>
+                <option value="image/jpeg" data-zh="JPG（最小）">JPG (smallest)</option>
+                <option value="image/png" data-zh="PNG（无损）">PNG (lossless)</option>
+                <option value="image/webp" data-zh="WEBP（现代）">WEBP (modern)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Quality</label>
+              <label data-zh="质量">Quality</label>
               <div class="range-row">
                 <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.92" />
                 <span class="val" id="qualityVal">92%</span>
@@ -153,10 +163,10 @@
             </div>
 
             <div class="actions">
-              <button class="btn btn-primary" id="processBtn" type="button">Apply Changes</button>
-              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled>Download</button>
+              <button class="btn btn-primary" id="processBtn" type="button" data-en="Apply Changes" data-zh="应用修改">Apply Changes</button>
+              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled data-en="Download" data-zh="下载">Download</button>
               
-              <button class="btn btn-secondary" id="resetBtn" type="button">Upload New</button>
+              <button class="btn btn-secondary" id="resetBtn" type="button" data-en="Upload New" data-zh="重新上传">Upload New</button>
             </div>
             <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);" id="fileInfo"></p>
           </div>
@@ -170,25 +180,25 @@
 <section style="background: var(--bg-soft);">
   <div class="container">
     <div class="prose">
-      <h2>About the Instagram Post Size Converter</h2>
-      <p>Instagram supports several image sizes, but the most engaging is the 4:5 portrait (1080×1350) because it takes up more vertical space in the feed. Our Instagram resizer has presets for every format, automatically handles aspect ratios, and outputs at the perfect resolution.</p>
+      <h2 data-zh="关于本工具">About this tool</h2>
+      <p data-zh="undefined">Instagram supports several image sizes, but the most engaging is the 4:5 portrait (1080×1350) because it takes up more vertical space in the feed. Our Instagram resizer has presets for every format, automatically handles aspect ratios, and outputs at the perfect resolution.</p>
 
-      <h2>Recommended Sizes</h2>
+      <h2 data-zh="推荐尺寸">Recommended Sizes</h2>
       <table>
-        <tr><th>Format</th><th>Size (px)</th><th>Aspect Ratio</th><th>Best For</th></tr>
-          <tr><td>Square Post</td><td>1080 × 1080</td><td>1:1</td><td>Feed posts</td></tr>
-          <tr><td>Portrait Post</td><td>1080 × 1350</td><td>4:5</td><td>More screen real estate</td></tr>
-          <tr><td>Landscape Post</td><td>1080 × 566</td><td>1.91:1</td><td>Cinematic look</td></tr>
-          <tr><td>Story / Reel</td><td>1080 × 1920</td><td>9:16</td><td>Full screen</td></tr>
+        <tr><th><span data-zh="格式">Format</span></th><th><span data-zh="尺寸（像素）">Size (px)</span></th><th><span data-zh="宽高比">Aspect Ratio</span></th><th><span data-zh="适合">Best For</span></th></tr>
+          <tr><td><span data-zh="方形帖子">Square Post</span></td><td><span data-zh="1080 × 1080">1080 × 1080</span></td><td><span data-zh="1:1">1:1</span></td><td><span data-zh="信息流帖子">Feed posts</span></td></tr>
+          <tr><td><span data-zh="竖图帖子">Portrait Post</span></td><td><span data-zh="1080 × 1350">1080 × 1350</span></td><td><span data-zh="4:5">4:5</span></td><td><span data-zh="更多屏幕空间">More screen real estate</span></td></tr>
+          <tr><td><span data-zh="横图帖子">Landscape Post</span></td><td><span data-zh="1080 × 566">1080 × 566</span></td><td><span data-zh="1.91:1">1.91:1</span></td><td><span data-zh="电影感">Cinematic look</span></td></tr>
+          <tr><td><span data-zh="故事 / Reels">Story / Reel</span></td><td><span data-zh="1080 × 1920">1080 × 1920</span></td><td><span data-zh="9:16">9:16</span></td><td><span data-zh="全屏">Full screen</span></td></tr>
       </table>
 
-      <h2>Why use ImageFitly?</h2>
+      <h2 data-zh="为什么选择 ImageFitly？">Why use ImageFitly?</h2>
       <ul>
-        <li><strong>100% Free</strong> — No hidden costs, no watermarks, no sign-up required.</li>
-        <li><strong>Browser-based</strong> — Your images are processed locally. Nothing is uploaded to any server.</li>
-        <li><strong>Fast</strong> — Process images in seconds using your device's native speed.</li>
-        <li><strong>Multiple formats</strong> — Export to JPG, PNG, or WEBP with adjustable quality.</li>
-        <li><strong>Custom dimensions</strong> — Use presets or enter any custom width and height.</li>
+        <li><strong data-zh="100% 免费">100% Free</strong> <span data-zh="—— 无隐藏费用、无水印、无需注册。">— No hidden costs, no watermarks, no sign-up required.</span></li>
+        <li><strong data-zh="浏览器端">Browser-based</strong> <span data-zh="—— 图片在本地处理，不会上传到任何服务器。">— Your images are processed locally. Nothing is uploaded to any server.</span></li>
+        <li><strong data-zh="极速">Fast</strong> <span data-zh="—— 利用设备原生算力，几秒完成处理。">— Process images in seconds using your device's native speed.</span></li>
+        <li><strong data-zh="多格式">Multiple formats</strong> <span data-zh="—— 可导出 JPG、PNG 或 WEBP，质量可调。">— Export to JPG, PNG, or WEBP with adjustable quality.</span></li>
+        <li><strong data-zh="自定义尺寸">Custom dimensions</strong> <span data-zh="—— 使用预设或输入任意宽高。">— Use presets or enter any custom width and height.</span></li>
       </ul>
     </div>
   </div>
@@ -198,29 +208,29 @@
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="section-eyebrow">FAQ</span>
-      <h2 class="section-title">Frequently asked questions</h2>
+      <span class="section-eyebrow" data-zh="常见问题">FAQ</span>
+      <h2 class="section-title" data-zh="常见问题解答">Frequently asked questions</h2>
     </div>
     <div class="faq">
       
       <div class="faq-item open">
-        <button class="faq-q">What is the best Instagram post size?</button>
-        <div class="faq-a"><p>1080×1350 pixels (4:5 portrait) is the best for engagement because it takes up the most screen space in the feed.</p></div>
+        <button class="faq-q" data-zh="Instagram 帖子的最佳尺寸是多少？">What is the best Instagram post size?</button>
+        <div class="faq-a"><p data-zh="1080×1350 像素（4:5 竖图）互动最佳，因为它在信息流中占据最多屏幕空间。">1080×1350 pixels (4:5 portrait) is the best for engagement because it takes up the most screen space in the feed.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">Does Instagram compress my images?</button>
-        <div class="faq-a"><p>Yes, Instagram compresses all uploads. Upload at 1080px wide to maintain quality after Instagram's compression.</p></div>
+        <button class="faq-q" data-zh="Instagram 会压缩我的图片吗？">Does Instagram compress my images?</button>
+        <div class="faq-a"><p data-zh="会，Instagram 会压缩所有上传内容。以 1080 像素宽上传可在压缩后仍保持画质。">Yes, Instagram compresses all uploads. Upload at 1080px wide to maintain quality after Instagram's compression.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">What is the size of an Instagram story?</button>
-        <div class="faq-a"><p>1080×1920 pixels (9:16 aspect ratio). Stories display full-screen on mobile devices.</p></div>
+        <button class="faq-q" data-zh="Instagram 故事的尺寸是多少？">What is the size of an Instagram story?</button>
+        <div class="faq-a"><p data-zh="1080×1920 像素（9:16 宽高比）。故事在移动端全屏显示。">1080×1920 pixels (9:16 aspect ratio). Stories display full-screen on mobile devices.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">Can I post the same image to multiple formats?</button>
-        <div class="faq-a"><p>Yes — use our presets to export the same image as square, portrait, and story versions.</p></div>
+        <button class="faq-q" data-zh="同一张图可以发到多个格式吗？">Can I post the same image to multiple formats?</button>
+        <div class="faq-a"><p data-zh="可以——使用我们的预设将同一张图导出为方形、竖图和故事版本。">Yes — use our presets to export the same image as square, portrait, and story versions.</p></div>
       </div>
     </div>
   </div>
@@ -230,28 +240,32 @@
 <section style="background: var(--bg-soft); padding: 60px 0;">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">More image tools</h2>
+      <h2 class="section-title" data-zh="更多图片工具">More image tools</h2>
     </div>
     <div class="tool-grid">
+      
       <a href="amazon-image-size-converter.html" class="tool-card">
         <div class="tool-icon">🛒</div>
-        <h3>Amazon Resizer</h3>
-        <p>2000×2000 px main images.</p>
+        <h3 data-zh="亚马逊调整器">Amazon Resizer</h3>
+        <p data-zh="2000×2000 像素主图。">2000×2000 px main images.</p>
       </a>
+      
       <a href="shopify-image-optimizer.html" class="tool-card">
         <div class="tool-icon">🛍️</div>
-        <h3>Shopify Optimizer</h3>
-        <p>Faster store loading.</p>
+        <h3 data-zh="Shopify 优化器">Shopify Optimizer</h3>
+        <p data-zh="加快店铺加载速度。">Faster store loading.</p>
       </a>
+      
       <a href="instagram-post-size.html" class="tool-card">
         <div class="tool-icon">📸</div>
-        <h3>Instagram Size</h3>
-        <p>Square, portrait, story.</p>
+        <h3 data-zh="Instagram 尺寸">Instagram Size</h3>
+        <p data-zh="方形、竖图、故事。">Square, portrait, story.</p>
       </a>
+      
       <a href="youtube-thumbnail-size.html" class="tool-card">
         <div class="tool-icon">▶️</div>
-        <h3>YouTube Thumbnail</h3>
-        <p>1280×720 px thumbnails.</p>
+        <h3 data-zh="YouTube 缩略图">YouTube Thumbnail</h3>
+        <p data-zh="1280×720 像素缩略图。">1280×720 px thumbnails.</p>
       </a>
     </div>
   </div>
@@ -265,49 +279,50 @@
           <span class="logo-icon">IF</span>
           <span>ImageFitly</span>
         </div>
-        <p>The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
+        <p data-zh="面向电商卖家与内容创作者的免费、隐私、浏览器端图片工具箱。">The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
       </div>
       <div>
-        <h5>E-commerce</h5>
+        <h5 data-zh="电商">E-commerce</h5>
         <ul>
-          <li><a href="amazon-image-size-converter.html">Amazon</a></li>
-          <li><a href="shopify-image-optimizer.html">Shopify</a></li>
-          <li><a href="etsy-photo-resize.html">Etsy</a></li>
-          <li><a href="ebay-image-compressor.html">eBay</a></li>
+          <li><a href="amazon-image-size-converter.html" data-zh="亚马逊">Amazon</a></li>
+          <li><a href="shopify-image-optimizer.html" data-zh="Shopify">Shopify</a></li>
+          <li><a href="etsy-photo-resize.html" data-zh="Etsy">Etsy</a></li>
+          <li><a href="ebay-image-compressor.html" data-zh="eBay">eBay</a></li>
         </ul>
       </div>
       <div>
-        <h5>Social Media</h5>
+        <h5 data-zh="社交媒体">Social Media</h5>
         <ul>
-          <li><a href="instagram-post-size.html">Instagram</a></li>
-          <li><a href="youtube-thumbnail-size.html">YouTube</a></li>
-          <li><a href="linkedin-banner-size.html">LinkedIn</a></li>
-          <li><a href="twitter-header-size.html">Twitter</a></li>
+          <li><a href="instagram-post-size.html" data-zh="Instagram">Instagram</a></li>
+          <li><a href="youtube-thumbnail-size.html" data-zh="YouTube">YouTube</a></li>
+          <li><a href="linkedin-banner-size.html" data-zh="LinkedIn">LinkedIn</a></li>
+          <li><a href="twitter-header-size.html" data-zh="Twitter">Twitter</a></li>
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h5 data-zh="公司">Company</h5>
         <ul>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../privacy.html">Privacy</a></li>
-          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="../about.html" data-zh="关于">About</a></li>
+          <li><a href="../contact.html" data-zh="联系我们">Contact</a></li>
+          <li><a href="../privacy.html" data-zh="隐私政策">Privacy</a></li>
+          <li><a href="../terms.html" data-zh="服务条款">Terms</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 ImageFitly. All rights reserved.</span>
-      <span>Made with ❤️ for creators worldwide</span>
+      <span data-zh="© 2026 ImageFitly. 版权所有。">© 2026 ImageFitly. All rights reserved.</span>
+      <span data-zh="为全球创作者用心打造 ❤️">Made with ❤️ for creators worldwide</span>
     </div>
   </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/i18n.js"></script>
 <script src="../js/image-engine.js"></script>
 <script src="../js/tool-page.js"></script>
 <script>
   const toolConfig = {
-    presets: [{"label":"Square (1:1)","w":1080,"h":1080,"fit":"contain"},{"label":"Portrait (4:5)","w":1080,"h":1350,"fit":"contain"},{"label":"Story (9:16)","w":1080,"h":1920,"fit":"contain"},{"label":"Landscape","w":1080,"h":566,"fit":"contain"},{"label":"Custom Size","w":1080,"h":1080,"fit":"contain"}],
+    presets: [{"label":"Square (1:1)","labelZh":"方形 (1:1)","w":1080,"h":1080,"fit":"contain"},{"label":"Portrait (4:5)","labelZh":"竖图 (4:5)","w":1080,"h":1350,"fit":"contain"},{"label":"Story (9:16)","labelZh":"故事 (9:16)","w":1080,"h":1920,"fit":"contain"},{"label":"Landscape","labelZh":"横图","w":1080,"h":566,"fit":"contain"},{"label":"Custom Size","labelZh":"自定义尺寸","w":1080,"h":1080,"fit":"contain"}],
     defaultPreset: 0,
     defaultFormat: 'image/jpeg',
     defaultQuality: 0.92,
@@ -315,20 +330,6 @@
   };
   document.addEventListener('DOMContentLoaded', () => {
     new ToolPage(toolConfig);
-    // Override preset click to set width/height
-    document.querySelectorAll('.preset-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const idx = parseInt(btn.dataset.idx);
-        const p = toolConfig.presets[idx];
-        if (p.w) {
-          document.getElementById('widthInput').value = p.w;
-          document.getElementById('heightInput').value = p.h;
-          document.getElementById('fitSelect').value = p.fit;
-        }
-        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
   });
 </script>
 

@@ -10,17 +10,17 @@ const ImageEngine = (function () {
   function loadFile(file) {
     return new Promise((resolve, reject) => {
       if (!file || !file.type.startsWith("image/")) {
-        reject(new Error("Please select a valid image file."));
+        reject(new Error(window.I18N ? window.I18N.t('tool.invalidImage', 'Please select a valid image file.') : 'Please select a valid image file.'));
         return;
       }
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = new Image();
         img.onload = () => resolve({ img, file, dataUrl: e.target.result });
-        img.onerror = () => reject(new Error("Failed to load image."));
+        img.onerror = () => reject(new Error(window.I18N ? window.I18N.t('tool.loadFailed', 'Failed to load image.') : 'Failed to load image.'));
         img.src = e.target.result;
       };
-      reader.onerror = () => reject(new Error("Failed to read file."));
+      reader.onerror = () => reject(new Error(window.I18N ? window.I18N.t('tool.readFailed', 'Failed to read file.') : 'Failed to read file.'));
       reader.readAsDataURL(file);
     });
   }
@@ -43,8 +43,17 @@ const ImageEngine = (function () {
 
     if (fit === "fill") {
       ctx.drawImage(img, 0, 0, width, height);
+    } else if (fit === "cover") {
+      const scale = Math.max(width / img.width, height / img.height);
+      const w = img.width * scale;
+      const h = img.height * scale;
+      const x = (width - w) / 2;
+      const y = (height - h) / 2;
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = "high";
+      ctx.drawImage(img, x, y, w, h);
     } else {
-      // Calculate scale to fit
+      // contain (default)
       const scale = Math.min(width / img.width, height / img.height);
       const w = img.width * scale;
       const h = img.height * scale;
@@ -160,7 +169,7 @@ const ImageEngine = (function () {
         bgRemovalModule = window.removeBackground;
         resolve();
       };
-      s.onerror = () => reject(new Error("Failed to load background removal library."));
+      s.onerror = () => reject(new Error(window.I18N ? window.I18N.t('tool.bgLibFailed', 'Failed to load background removal library.') : 'Failed to load background removal library.'));
       document.head.appendChild(s);
     });
     return bgRemovalModule;

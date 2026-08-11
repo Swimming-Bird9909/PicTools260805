@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Photo Background Remover — AI Free | ImageFitly</title>
-  <meta name="description" content="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." />
+  <title data-zh="AI 产品图背景去除器 | ImageFitly 免费在线">Product Photo Background Remover — AI Free | ImageFitly</title>
+  <meta name="description" content="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." data-zh="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." />
   <meta name="keywords" content="product photo background remover, remove background, ai background removal, white background product photo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://imagefitly.com/tools/product-photo-background-remover.html" />
-  <meta property="og:title" content="Product Photo Background Remover — AI Free | ImageFitly" />
-  <meta property="og:description" content="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." />
+  <meta property="og:title" content="Product Photo Background Remover — AI Free | ImageFitly" data-zh="AI 产品图背景去除器 | ImageFitly" />
+  <meta property="og:description" content="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." data-zh="Free AI-powered product photo background remover. Remove backgrounds from product images instantly. No Photoshop needed." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://imagefitly.com/tools/product-photo-background-remover.html" />
   <link rel="stylesheet" href="../css/style.css" />
@@ -69,25 +69,29 @@
       </a>
       <button class="mobile-toggle" aria-label="Menu">☰</button>
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#tools">All Tools</a></li>
-        <li><a href="../blog/index.html">Blog</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#start" class="nav-cta">Get Started</a></li>
+        <li><a href="../index.html" data-zh="首页">Home</a></li>
+        <li><a href="../index.html#tools" data-zh="全部工具">All Tools</a></li>
+        <li><a href="../blog/index.html" data-zh="博客">Blog</a></li>
+        <li><a href="../about.html" data-zh="关于">About</a></li>
+        <li><a href="../index.html#start" class="nav-cta" data-zh="立即开始">Get Started</a></li>
       </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
     </nav>
   </div>
 </header>
 
 <section class="tool-hero">
   <div class="container">
-    <h1>AI Product Photo Background Remover</h1>
-    <p>Remove backgrounds from product photos with AI. Get a clean white or transparent background in one click.</p>
+    <h1 data-zh="AI 产品图背景去除器">AI Product Photo Background Remover</h1>
+    <p data-zh="用 AI 去除产品图背景。一键获得干净的白底或透明背景。">Remove backgrounds from product photos with AI. Get a clean white or transparent background in one click.</p>
     <div class="tool-meta">
-      <span>⚡ 100% Free</span>
-      <span>🔒 100% Private</span>
-      <span>📱 Works on Mobile</span>
-      <span>🚀 No Sign-up</span>
+      <span data-zh="⚡ 100% 免费">⚡ 100% Free</span>
+      <span data-zh="🔒 100% 隐私">🔒 100% Private</span>
+      <span data-zh="📱 移动端可用">📱 Works on Mobile</span>
+      <span data-zh="🚀 无需注册">🚀 No Sign-up</span>
     </div>
   </div>
 </section>
@@ -97,26 +101,32 @@
     <div class="app-card">
       <div class="dropzone" id="dropzone">
         <span class="dropzone-icon">📤</span>
-        <h3>Drop your image here</h3>
-        <p>or click to browse — JPG, PNG, WEBP up to 20MB</p>
+        <h3 data-zh="将图片拖拽到此处">Drop your image here</h3>
+        <p data-zh="或点击选择文件 — 支持 JPG、PNG、WEBP，最大 20MB">or click to browse — JPG, PNG, WEBP up to 20MB</p>
         <input type="file" id="fileInput" accept="image/*" />
       </div>
 
       <div class="editor" id="editor">
         <div class="editor-grid">
-          <div class="preview-wrap">
-            <img id="previewImg" alt="Preview" />
+          <div class="preview-wrap" id="previewWrap">
+            <div class="preview-canvas-box" id="previewCanvasBox">
+              <img id="previewImg" alt="Preview" />
+            </div>
+            <div class="preview-meta">
+              <span class="preview-badge" id="previewBadge" data-zh="上传图片以预览">Upload an image to preview</span>
+              <span class="preview-zoom" id="previewZoom"></span>
+            </div>
           </div>
           <div class="controls">
-            <h4>Quick Presets</h4>
+            <h4 data-zh="快速预设">Quick Presets</h4>
             <div class="preset-grid" id="presetGrid">
-              <button class="preset-btn active" data-idx="0">White BG Square<small>1500×1500px</small></button>
-            <button class="preset-btn" data-idx="1">White BG Portrait<small>1500×2000px</small></button>
-            <button class="preset-btn" data-idx="2">Transparent<small>1500×1500px</small></button>
-            <button class="preset-btn" data-idx="3">Custom Size<small>1000×1000px</small></button>
+              <button class="preset-btn active" data-idx="0" data-en="White BG Square" data-zh="白底方形">White BG Square<small>1500×1500px</small></button>
+            <button class="preset-btn" data-idx="1" data-en="White BG Portrait" data-zh="白底竖图">White BG Portrait<small>1500×2000px</small></button>
+            <button class="preset-btn" data-idx="2" data-en="Transparent" data-zh="透明背景">Transparent<small>1500×1500px</small></button>
+            <button class="preset-btn" data-idx="3" data-en="Custom Size" data-zh="自定义尺寸">Custom Size<small>1000×1000px</small></button>
             </div>
 
-            <h4>Custom Dimensions</h4>
+            <h4 data-zh="自定义尺寸">Custom Dimensions</h4>
             <div class="control-group">
               <div class="input-row">
                 <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
@@ -125,31 +135,31 @@
             </div>
 
             <div class="control-group">
-              <label>Fit Mode</label>
+              <label data-zh="填充模式">Fit Mode</label>
               <select id="fitSelect">
-                <option value="contain">Contain (add padding)</option>
-                <option value="cover">Cover (crop to fit)</option>
-                <option value="fill">Fill (stretch)</option>
+                <option value="contain" data-zh="Contain（添加留白）">Contain (add padding)</option>
+                <option value="cover" data-zh="Cover（裁剪填满）">Cover (crop to fit)</option>
+                <option value="fill" data-zh="Fill（拉伸填满）">Fill (stretch)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Background Color</label>
+              <label data-zh="背景颜色">Background Color</label>
               <input type="color" id="bgColor" value="#ffffff" style="width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer;" />
             </div>
 
-            <h4>Output Settings</h4>
+            <h4 data-zh="输出设置">Output Settings</h4>
             <div class="control-group">
-              <label>Format</label>
+              <label data-zh="格式">Format</label>
               <select id="formatSelect">
-                <option value="image/jpeg">JPG (smallest)</option>
-                <option value="image/png">PNG (lossless)</option>
-                <option value="image/webp">WEBP (modern)</option>
+                <option value="image/jpeg" data-zh="JPG（最小）">JPG (smallest)</option>
+                <option value="image/png" data-zh="PNG（无损）">PNG (lossless)</option>
+                <option value="image/webp" data-zh="WEBP（现代）">WEBP (modern)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Quality</label>
+              <label data-zh="质量">Quality</label>
               <div class="range-row">
                 <input type="range" id="quality" min="0.1" max="1" step="0.05" value="1" />
                 <span class="val" id="qualityVal">100%</span>
@@ -157,10 +167,10 @@
             </div>
 
             <div class="actions">
-              <button class="btn btn-primary" id="processBtn" type="button">Apply Changes</button>
-              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled>Download</button>
-              <button class="btn btn-secondary" id="bgRemoveBtn" type="button">🤖 AI Remove Background</button>
-              <button class="btn btn-secondary" id="resetBtn" type="button">Upload New</button>
+              <button class="btn btn-primary" id="processBtn" type="button" data-en="Apply Changes" data-zh="应用修改">Apply Changes</button>
+              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled data-en="Download" data-zh="下载">Download</button>
+              <button class="btn btn-secondary" id="bgRemoveBtn" type="button" data-en="AI Remove Background" data-zh="AI 智能去背景">AI Remove Background</button>
+              <button class="btn btn-secondary" id="resetBtn" type="button" data-en="Upload New" data-zh="重新上传">Upload New</button>
             </div>
             <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);" id="fileInfo"></p>
           </div>
@@ -174,25 +184,25 @@
 <section style="background: var(--bg-soft);">
   <div class="container">
     <div class="prose">
-      <h2>About the AI Product Photo Background Remover</h2>
-      <p>White background product photos convert better. Amazon, Walmart, and most marketplaces require or prefer pure white backgrounds. Our AI background remover automatically detects your product and creates a clean, isolated image — no Photoshop, no manual selection, no skills needed.</p>
+      <h2 data-zh="关于本工具">About this tool</h2>
+      <p data-zh="undefined">White background product photos convert better. Amazon, Walmart, and most marketplaces require or prefer pure white backgrounds. Our AI background remover automatically detects your product and creates a clean, isolated image — no Photoshop, no manual selection, no skills needed.</p>
 
-      <h2>Recommended Sizes</h2>
+      <h2 data-zh="推荐尺寸">Recommended Sizes</h2>
       <table>
-        <tr><th>Platform</th><th>Recommended BG</th><th>Output Format</th><th>Best Practice</th></tr>
-          <tr><td>Amazon</td><td>Pure white (255,255,255)</td><td>JPG</td><td>100% white required</td></tr>
-          <tr><td>Shopify</td><td>White or lifestyle</td><td>JPG/WEBP</td><td>Consistent style</td></tr>
-          <tr><td>Etsy</td><td>White or contextual</td><td>JPG</td><td>Showcase product</td></tr>
-          <tr><td>eBay</td><td>White or solid color</td><td>JPG</td><td>Clean look</td></tr>
+        <tr><th><span data-zh="平台">Platform</span></th><th><span data-zh="推荐背景">Recommended BG</span></th><th><span data-zh="输出格式">Output Format</span></th><th><span data-zh="最佳实践">Best Practice</span></th></tr>
+          <tr><td><span data-zh="亚马逊">Amazon</span></td><td><span data-zh="纯白 (255,255,255)">Pure white (255,255,255)</span></td><td><span data-zh="JPG">JPG</span></td><td><span data-zh="必须为纯白">100% white required</span></td></tr>
+          <tr><td><span data-zh="Shopify">Shopify</span></td><td><span data-zh="白底或场景">White or lifestyle</span></td><td><span data-zh="JPG/WEBP">JPG/WEBP</span></td><td><span data-zh="风格统一">Consistent style</span></td></tr>
+          <tr><td><span data-zh="Etsy">Etsy</span></td><td><span data-zh="白底或情境">White or contextual</span></td><td><span data-zh="JPG">JPG</span></td><td><span data-zh="展示产品">Showcase product</span></td></tr>
+          <tr><td><span data-zh="eBay">eBay</span></td><td><span data-zh="白底或纯色">White or solid color</span></td><td><span data-zh="JPG">JPG</span></td><td><span data-zh="简洁观感">Clean look</span></td></tr>
       </table>
 
-      <h2>Why use ImageFitly?</h2>
+      <h2 data-zh="为什么选择 ImageFitly？">Why use ImageFitly?</h2>
       <ul>
-        <li><strong>100% Free</strong> — No hidden costs, no watermarks, no sign-up required.</li>
-        <li><strong>Browser-based</strong> — Your images are processed locally. Nothing is uploaded to any server.</li>
-        <li><strong>Fast</strong> — Process images in seconds using your device's native speed.</li>
-        <li><strong>Multiple formats</strong> — Export to JPG, PNG, or WEBP with adjustable quality.</li>
-        <li><strong>Custom dimensions</strong> — Use presets or enter any custom width and height.</li>
+        <li><strong data-zh="100% 免费">100% Free</strong> <span data-zh="—— 无隐藏费用、无水印、无需注册。">— No hidden costs, no watermarks, no sign-up required.</span></li>
+        <li><strong data-zh="浏览器端">Browser-based</strong> <span data-zh="—— 图片在本地处理，不会上传到任何服务器。">— Your images are processed locally. Nothing is uploaded to any server.</span></li>
+        <li><strong data-zh="极速">Fast</strong> <span data-zh="—— 利用设备原生算力，几秒完成处理。">— Process images in seconds using your device's native speed.</span></li>
+        <li><strong data-zh="多格式">Multiple formats</strong> <span data-zh="—— 可导出 JPG、PNG 或 WEBP，质量可调。">— Export to JPG, PNG, or WEBP with adjustable quality.</span></li>
+        <li><strong data-zh="自定义尺寸">Custom dimensions</strong> <span data-zh="—— 使用预设或输入任意宽高。">— Use presets or enter any custom width and height.</span></li>
       </ul>
     </div>
   </div>
@@ -202,34 +212,34 @@
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="section-eyebrow">FAQ</span>
-      <h2 class="section-title">Frequently asked questions</h2>
+      <span class="section-eyebrow" data-zh="常见问题">FAQ</span>
+      <h2 class="section-title" data-zh="常见问题解答">Frequently asked questions</h2>
     </div>
     <div class="faq">
       
       <div class="faq-item open">
-        <button class="faq-q">How does AI background removal work?</button>
-        <div class="faq-a"><p>Our AI uses a deep learning model that recognizes the main subject and separates it from the background. It runs entirely in your browser for privacy.</p></div>
+        <button class="faq-q" data-zh="AI 背景去除是如何工作的？">How does AI background removal work?</button>
+        <div class="faq-a"><p data-zh="我们的 AI 使用深度学习模型识别主体并将其与背景分离。它完全在你的浏览器中运行，保障隐私。">Our AI uses a deep learning model that recognizes the main subject and separates it from the background. It runs entirely in your browser for privacy.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">Is the background remover really free?</button>
-        <div class="faq-a"><p>Yes — 100% free, no watermark, no sign-up. The first use loads the AI model (~5MB), then runs locally.</p></div>
+        <button class="faq-q" data-zh="背景去除器真的免费吗？">Is the background remover really free?</button>
+        <div class="faq-a"><p data-zh="是的——100% 免费、无水印、无需注册。首次使用会加载 AI 模型（约 5MB），之后在本地运行。">Yes — 100% free, no watermark, no sign-up. The first use loads the AI model (~5MB), then runs locally.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">What image format for transparent background?</button>
-        <div class="faq-a"><p>Use PNG for transparent backgrounds. PNG supports alpha channel, while JPG does not.</p></div>
+        <button class="faq-q" data-zh="透明背景应该用哪种格式？">What image format for transparent background?</button>
+        <div class="faq-a"><p data-zh="透明背景请用 PNG。PNG 支持 alpha 通道，而 JPG 不支持。">Use PNG for transparent backgrounds. PNG supports alpha channel, while JPG does not.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">Can I remove background from a JPG?</button>
-        <div class="faq-a"><p>Yes, but the output must be PNG to keep transparency. Our tool automatically handles the conversion.</p></div>
+        <button class="faq-q" data-zh="可以从 JPG 去除背景吗？">Can I remove background from a JPG?</button>
+        <div class="faq-a"><p data-zh="可以，但输出必须为 PNG 才能保留透明度。我们的工具会自动处理转换。">Yes, but the output must be PNG to keep transparency. Our tool automatically handles the conversion.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">How accurate is the AI?</button>
-        <div class="faq-a"><p>Our AI works best on products with clear edges (clothing, electronics, packaged goods). For complex scenes, results may vary.</p></div>
+        <button class="faq-q" data-zh="AI 的准确度如何？">How accurate is the AI?</button>
+        <div class="faq-a"><p data-zh="我们的 AI 在边缘清晰的产品（服装、电子产品、包装商品）上效果最佳。复杂场景的结果可能有所差异。">Our AI works best on products with clear edges (clothing, electronics, packaged goods). For complex scenes, results may vary.</p></div>
       </div>
     </div>
   </div>
@@ -239,28 +249,32 @@
 <section style="background: var(--bg-soft); padding: 60px 0;">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">More image tools</h2>
+      <h2 class="section-title" data-zh="更多图片工具">More image tools</h2>
     </div>
     <div class="tool-grid">
+      
       <a href="amazon-image-size-converter.html" class="tool-card">
         <div class="tool-icon">🛒</div>
-        <h3>Amazon Resizer</h3>
-        <p>2000×2000 px main images.</p>
+        <h3 data-zh="亚马逊调整器">Amazon Resizer</h3>
+        <p data-zh="2000×2000 像素主图。">2000×2000 px main images.</p>
       </a>
+      
       <a href="shopify-image-optimizer.html" class="tool-card">
         <div class="tool-icon">🛍️</div>
-        <h3>Shopify Optimizer</h3>
-        <p>Faster store loading.</p>
+        <h3 data-zh="Shopify 优化器">Shopify Optimizer</h3>
+        <p data-zh="加快店铺加载速度。">Faster store loading.</p>
       </a>
+      
       <a href="instagram-post-size.html" class="tool-card">
         <div class="tool-icon">📸</div>
-        <h3>Instagram Size</h3>
-        <p>Square, portrait, story.</p>
+        <h3 data-zh="Instagram 尺寸">Instagram Size</h3>
+        <p data-zh="方形、竖图、故事。">Square, portrait, story.</p>
       </a>
+      
       <a href="youtube-thumbnail-size.html" class="tool-card">
         <div class="tool-icon">▶️</div>
-        <h3>YouTube Thumbnail</h3>
-        <p>1280×720 px thumbnails.</p>
+        <h3 data-zh="YouTube 缩略图">YouTube Thumbnail</h3>
+        <p data-zh="1280×720 像素缩略图。">1280×720 px thumbnails.</p>
       </a>
     </div>
   </div>
@@ -274,49 +288,50 @@
           <span class="logo-icon">IF</span>
           <span>ImageFitly</span>
         </div>
-        <p>The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
+        <p data-zh="面向电商卖家与内容创作者的免费、隐私、浏览器端图片工具箱。">The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
       </div>
       <div>
-        <h5>E-commerce</h5>
+        <h5 data-zh="电商">E-commerce</h5>
         <ul>
-          <li><a href="amazon-image-size-converter.html">Amazon</a></li>
-          <li><a href="shopify-image-optimizer.html">Shopify</a></li>
-          <li><a href="etsy-photo-resize.html">Etsy</a></li>
-          <li><a href="ebay-image-compressor.html">eBay</a></li>
+          <li><a href="amazon-image-size-converter.html" data-zh="亚马逊">Amazon</a></li>
+          <li><a href="shopify-image-optimizer.html" data-zh="Shopify">Shopify</a></li>
+          <li><a href="etsy-photo-resize.html" data-zh="Etsy">Etsy</a></li>
+          <li><a href="ebay-image-compressor.html" data-zh="eBay">eBay</a></li>
         </ul>
       </div>
       <div>
-        <h5>Social Media</h5>
+        <h5 data-zh="社交媒体">Social Media</h5>
         <ul>
-          <li><a href="instagram-post-size.html">Instagram</a></li>
-          <li><a href="youtube-thumbnail-size.html">YouTube</a></li>
-          <li><a href="linkedin-banner-size.html">LinkedIn</a></li>
-          <li><a href="twitter-header-size.html">Twitter</a></li>
+          <li><a href="instagram-post-size.html" data-zh="Instagram">Instagram</a></li>
+          <li><a href="youtube-thumbnail-size.html" data-zh="YouTube">YouTube</a></li>
+          <li><a href="linkedin-banner-size.html" data-zh="LinkedIn">LinkedIn</a></li>
+          <li><a href="twitter-header-size.html" data-zh="Twitter">Twitter</a></li>
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h5 data-zh="公司">Company</h5>
         <ul>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../privacy.html">Privacy</a></li>
-          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="../about.html" data-zh="关于">About</a></li>
+          <li><a href="../contact.html" data-zh="联系我们">Contact</a></li>
+          <li><a href="../privacy.html" data-zh="隐私政策">Privacy</a></li>
+          <li><a href="../terms.html" data-zh="服务条款">Terms</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 ImageFitly. All rights reserved.</span>
-      <span>Made with ❤️ for creators worldwide</span>
+      <span data-zh="© 2026 ImageFitly. 版权所有。">© 2026 ImageFitly. All rights reserved.</span>
+      <span data-zh="为全球创作者用心打造 ❤️">Made with ❤️ for creators worldwide</span>
     </div>
   </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/i18n.js"></script>
 <script src="../js/image-engine.js"></script>
 <script src="../js/tool-page.js"></script>
 <script>
   const toolConfig = {
-    presets: [{"label":"White BG Square","w":1500,"h":1500,"fit":"contain"},{"label":"White BG Portrait","w":1500,"h":2000,"fit":"contain"},{"label":"Transparent","w":1500,"h":1500,"fit":"contain"},{"label":"Custom Size","w":1000,"h":1000,"fit":"contain"}],
+    presets: [{"label":"White BG Square","labelZh":"白底方形","w":1500,"h":1500,"fit":"contain"},{"label":"White BG Portrait","labelZh":"白底竖图","w":1500,"h":2000,"fit":"contain"},{"label":"Transparent","labelZh":"透明背景","w":1500,"h":1500,"fit":"contain"},{"label":"Custom Size","labelZh":"自定义尺寸","w":1000,"h":1000,"fit":"contain"}],
     defaultPreset: 0,
     defaultFormat: 'image/png',
     defaultQuality: 1,
@@ -324,20 +339,6 @@
   };
   document.addEventListener('DOMContentLoaded', () => {
     new ToolPage(toolConfig);
-    // Override preset click to set width/height
-    document.querySelectorAll('.preset-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const idx = parseInt(btn.dataset.idx);
-        const p = toolConfig.presets[idx];
-        if (p.w) {
-          document.getElementById('widthInput').value = p.w;
-          document.getElementById('heightInput').value = p.h;
-          document.getElementById('fitSelect').value = p.fit;
-        }
-        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
   });
 </script>
 

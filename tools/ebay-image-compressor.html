@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eBay Image Compressor — Free Online | ImageFitly</title>
-  <meta name="description" content="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." />
+  <title data-zh="eBay 图片压缩器 | ImageFitly 免费在线">eBay Image Compressor — Free Online | ImageFitly</title>
+  <meta name="description" content="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." data-zh="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." />
   <meta name="keywords" content="ebay image compressor, ebay listing photo size, ebay image requirements, compress image for ebay" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://imagefitly.com/tools/ebay-image-compressor.html" />
-  <meta property="og:title" content="eBay Image Compressor — Free Online | ImageFitly" />
-  <meta property="og:description" content="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." />
+  <meta property="og:title" content="eBay Image Compressor — Free Online | ImageFitly" data-zh="eBay 图片压缩器 | ImageFitly" />
+  <meta property="og:description" content="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." data-zh="Free eBay image compressor. Reduce eBay listing image file size while maintaining quality. Meet eBay's 500KB recommendation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://imagefitly.com/tools/ebay-image-compressor.html" />
   <link rel="stylesheet" href="../css/style.css" />
@@ -64,25 +64,29 @@
       </a>
       <button class="mobile-toggle" aria-label="Menu">☰</button>
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#tools">All Tools</a></li>
-        <li><a href="../blog/index.html">Blog</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../index.html#start" class="nav-cta">Get Started</a></li>
+        <li><a href="../index.html" data-zh="首页">Home</a></li>
+        <li><a href="../index.html#tools" data-zh="全部工具">All Tools</a></li>
+        <li><a href="../blog/index.html" data-zh="博客">Blog</a></li>
+        <li><a href="../about.html" data-zh="关于">About</a></li>
+        <li><a href="../index.html#start" class="nav-cta" data-zh="立即开始">Get Started</a></li>
       </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
     </nav>
   </div>
 </header>
 
 <section class="tool-hero">
   <div class="container">
-    <h1>eBay Image Compressor</h1>
-    <p>Compress eBay listing images to under 500KB. Fast uploads, clear photos, more clicks.</p>
+    <h1 data-zh="eBay 图片压缩器">eBay Image Compressor</h1>
+    <p data-zh="将 eBay 商品图压缩至 500KB 以内。上传更快、画质清晰、点击更多。">Compress eBay listing images to under 500KB. Fast uploads, clear photos, more clicks.</p>
     <div class="tool-meta">
-      <span>⚡ 100% Free</span>
-      <span>🔒 100% Private</span>
-      <span>📱 Works on Mobile</span>
-      <span>🚀 No Sign-up</span>
+      <span data-zh="⚡ 100% 免费">⚡ 100% Free</span>
+      <span data-zh="🔒 100% 隐私">🔒 100% Private</span>
+      <span data-zh="📱 移动端可用">📱 Works on Mobile</span>
+      <span data-zh="🚀 无需注册">🚀 No Sign-up</span>
     </div>
   </div>
 </section>
@@ -92,26 +96,32 @@
     <div class="app-card">
       <div class="dropzone" id="dropzone">
         <span class="dropzone-icon">📤</span>
-        <h3>Drop your image here</h3>
-        <p>or click to browse — JPG, PNG, WEBP up to 20MB</p>
+        <h3 data-zh="将图片拖拽到此处">Drop your image here</h3>
+        <p data-zh="或点击选择文件 — 支持 JPG、PNG、WEBP，最大 20MB">or click to browse — JPG, PNG, WEBP up to 20MB</p>
         <input type="file" id="fileInput" accept="image/*" />
       </div>
 
       <div class="editor" id="editor">
         <div class="editor-grid">
-          <div class="preview-wrap">
-            <img id="previewImg" alt="Preview" />
+          <div class="preview-wrap" id="previewWrap">
+            <div class="preview-canvas-box" id="previewCanvasBox">
+              <img id="previewImg" alt="Preview" />
+            </div>
+            <div class="preview-meta">
+              <span class="preview-badge" id="previewBadge" data-zh="上传图片以预览">Upload an image to preview</span>
+              <span class="preview-zoom" id="previewZoom"></span>
+            </div>
           </div>
           <div class="controls">
-            <h4>Quick Presets</h4>
+            <h4 data-zh="快速预设">Quick Presets</h4>
             <div class="preset-grid" id="presetGrid">
-              <button class="preset-btn active" data-idx="0">eBay Square<small>1600×1600px</small></button>
-            <button class="preset-btn" data-idx="1">eBay Recommended<small>1000×1000px</small></button>
-            <button class="preset-btn" data-idx="2">eBay Thumbnail<small>500×500px</small></button>
-            <button class="preset-btn" data-idx="3">Custom Size<small>1000×1000px</small></button>
+              <button class="preset-btn active" data-idx="0" data-en="eBay Square" data-zh="eBay 方形图">eBay Square<small>1600×1600px</small></button>
+            <button class="preset-btn" data-idx="1" data-en="eBay Recommended" data-zh="eBay 推荐">eBay Recommended<small>1000×1000px</small></button>
+            <button class="preset-btn" data-idx="2" data-en="eBay Thumbnail" data-zh="eBay 缩略图">eBay Thumbnail<small>500×500px</small></button>
+            <button class="preset-btn" data-idx="3" data-en="Custom Size" data-zh="自定义尺寸">Custom Size<small>1000×1000px</small></button>
             </div>
 
-            <h4>Custom Dimensions</h4>
+            <h4 data-zh="自定义尺寸">Custom Dimensions</h4>
             <div class="control-group">
               <div class="input-row">
                 <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
@@ -120,31 +130,31 @@
             </div>
 
             <div class="control-group">
-              <label>Fit Mode</label>
+              <label data-zh="填充模式">Fit Mode</label>
               <select id="fitSelect">
-                <option value="contain">Contain (add padding)</option>
-                <option value="cover">Cover (crop to fit)</option>
-                <option value="fill">Fill (stretch)</option>
+                <option value="contain" data-zh="Contain（添加留白）">Contain (add padding)</option>
+                <option value="cover" data-zh="Cover（裁剪填满）">Cover (crop to fit)</option>
+                <option value="fill" data-zh="Fill（拉伸填满）">Fill (stretch)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Background Color</label>
+              <label data-zh="背景颜色">Background Color</label>
               <input type="color" id="bgColor" value="#ffffff" style="width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer;" />
             </div>
 
-            <h4>Output Settings</h4>
+            <h4 data-zh="输出设置">Output Settings</h4>
             <div class="control-group">
-              <label>Format</label>
+              <label data-zh="格式">Format</label>
               <select id="formatSelect">
-                <option value="image/jpeg">JPG (smallest)</option>
-                <option value="image/png">PNG (lossless)</option>
-                <option value="image/webp">WEBP (modern)</option>
+                <option value="image/jpeg" data-zh="JPG（最小）">JPG (smallest)</option>
+                <option value="image/png" data-zh="PNG（无损）">PNG (lossless)</option>
+                <option value="image/webp" data-zh="WEBP（现代）">WEBP (modern)</option>
               </select>
             </div>
 
             <div class="control-group">
-              <label>Quality</label>
+              <label data-zh="质量">Quality</label>
               <div class="range-row">
                 <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.8" />
                 <span class="val" id="qualityVal">80%</span>
@@ -152,10 +162,10 @@
             </div>
 
             <div class="actions">
-              <button class="btn btn-primary" id="processBtn" type="button">Apply Changes</button>
-              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled>Download</button>
+              <button class="btn btn-primary" id="processBtn" type="button" data-en="Apply Changes" data-zh="应用修改">Apply Changes</button>
+              <button class="btn btn-gradient" id="downloadBtn" type="button" disabled data-en="Download" data-zh="下载">Download</button>
               
-              <button class="btn btn-secondary" id="resetBtn" type="button">Upload New</button>
+              <button class="btn btn-secondary" id="resetBtn" type="button" data-en="Upload New" data-zh="重新上传">Upload New</button>
             </div>
             <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);" id="fileInfo"></p>
           </div>
@@ -169,24 +179,24 @@
 <section style="background: var(--bg-soft);">
   <div class="container">
     <div class="prose">
-      <h2>About the eBay Image Compressor</h2>
-      <p>eBay recommends listing images be at least 500 pixels on the longest side, with 1600×1600 pixels being the sweet spot. Keeping file sizes under 500KB ensures fast page loads and better search placement. Our compressor reduces file size while keeping your product photos crystal clear.</p>
+      <h2 data-zh="关于本工具">About this tool</h2>
+      <p data-zh="undefined">eBay recommends listing images be at least 500 pixels on the longest side, with 1600×1600 pixels being the sweet spot. Keeping file sizes under 500KB ensures fast page loads and better search placement. Our compressor reduces file size while keeping your product photos crystal clear.</p>
 
-      <h2>Recommended Sizes</h2>
+      <h2 data-zh="推荐尺寸">Recommended Sizes</h2>
       <table>
-        <tr><th>Image Type</th><th>Recommended Size</th><th>Max File Size</th><th>Format</th></tr>
-          <tr><td>Listing Photo</td><td>1600 × 1600 px</td><td>500 KB</td><td>JPG/PNG</td></tr>
-          <tr><td>Gallery Photo</td><td>1000 × 1000 px</td><td>500 KB</td><td>JPG/PNG</td></tr>
-          <tr><td>Thumbnail</td><td>500 × 500 px</td><td>500 KB</td><td>JPG/PNG</td></tr>
+        <tr><th><span data-zh="图片类型">Image Type</span></th><th><span data-zh="推荐尺寸">Recommended Size</span></th><th><span data-zh="最大文件大小">Max File Size</span></th><th><span data-zh="格式">Format</span></th></tr>
+          <tr><td><span data-zh="商品图">Listing Photo</span></td><td><span data-zh="1600 × 1600 像素">1600 × 1600 px</span></td><td><span data-zh="500 KB">500 KB</span></td><td><span data-zh="JPG/PNG">JPG/PNG</span></td></tr>
+          <tr><td><span data-zh="画廊图">Gallery Photo</span></td><td><span data-zh="1000 × 1000 像素">1000 × 1000 px</span></td><td><span data-zh="500 KB">500 KB</span></td><td><span data-zh="JPG/PNG">JPG/PNG</span></td></tr>
+          <tr><td><span data-zh="缩略图">Thumbnail</span></td><td><span data-zh="500 × 500 像素">500 × 500 px</span></td><td><span data-zh="500 KB">500 KB</span></td><td><span data-zh="JPG/PNG">JPG/PNG</span></td></tr>
       </table>
 
-      <h2>Why use ImageFitly?</h2>
+      <h2 data-zh="为什么选择 ImageFitly？">Why use ImageFitly?</h2>
       <ul>
-        <li><strong>100% Free</strong> — No hidden costs, no watermarks, no sign-up required.</li>
-        <li><strong>Browser-based</strong> — Your images are processed locally. Nothing is uploaded to any server.</li>
-        <li><strong>Fast</strong> — Process images in seconds using your device's native speed.</li>
-        <li><strong>Multiple formats</strong> — Export to JPG, PNG, or WEBP with adjustable quality.</li>
-        <li><strong>Custom dimensions</strong> — Use presets or enter any custom width and height.</li>
+        <li><strong data-zh="100% 免费">100% Free</strong> <span data-zh="—— 无隐藏费用、无水印、无需注册。">— No hidden costs, no watermarks, no sign-up required.</span></li>
+        <li><strong data-zh="浏览器端">Browser-based</strong> <span data-zh="—— 图片在本地处理，不会上传到任何服务器。">— Your images are processed locally. Nothing is uploaded to any server.</span></li>
+        <li><strong data-zh="极速">Fast</strong> <span data-zh="—— 利用设备原生算力，几秒完成处理。">— Process images in seconds using your device's native speed.</span></li>
+        <li><strong data-zh="多格式">Multiple formats</strong> <span data-zh="—— 可导出 JPG、PNG 或 WEBP，质量可调。">— Export to JPG, PNG, or WEBP with adjustable quality.</span></li>
+        <li><strong data-zh="自定义尺寸">Custom dimensions</strong> <span data-zh="—— 使用预设或输入任意宽高。">— Use presets or enter any custom width and height.</span></li>
       </ul>
     </div>
   </div>
@@ -196,29 +206,29 @@
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="section-eyebrow">FAQ</span>
-      <h2 class="section-title">Frequently asked questions</h2>
+      <span class="section-eyebrow" data-zh="常见问题">FAQ</span>
+      <h2 class="section-title" data-zh="常见问题解答">Frequently asked questions</h2>
     </div>
     <div class="faq">
       
       <div class="faq-item open">
-        <button class="faq-q">What is the best image size for eBay?</button>
-        <div class="faq-a"><p>eBay recommends 1600×1600 pixels for the highest quality display. This size supports the picture zoom feature in eBay listings.</p></div>
+        <button class="faq-q" data-zh="eBay 的最佳图片尺寸是多少？">What is the best image size for eBay?</button>
+        <div class="faq-a"><p data-zh="eBay 推荐 1600×1600 像素以获得最高画质显示，该尺寸支持商品图中的放大功能。">eBay recommends 1600×1600 pixels for the highest quality display. This size supports the picture zoom feature in eBay listings.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">What is the max file size for eBay images?</button>
-        <div class="faq-a"><p>eBay allows up to 500KB per image in most categories. Use our quality slider to stay within this limit.</p></div>
+        <button class="faq-q" data-zh="eBay 图片的最大文件大小是多少？">What is the max file size for eBay images?</button>
+        <div class="faq-a"><p data-zh="大部分类目每张图片上限为 500KB。使用我们的质量滑块可保持在限制内。">eBay allows up to 500KB per image in most categories. Use our quality slider to stay within this limit.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">Does eBay accept WEBP images?</button>
-        <div class="faq-a"><p>No. eBay requires JPG, PNG, GIF, BMP, or TIFF. Our tool outputs JPG by default for best compatibility.</p></div>
+        <button class="faq-q" data-zh="eBay 接受 WEBP 图片吗？">Does eBay accept WEBP images?</button>
+        <div class="faq-a"><p data-zh="不接受。eBay 要求 JPG、PNG、GIF、BMP 或 TIFF。我们的工具默认输出 JPG 以获得最佳兼容性。">No. eBay requires JPG, PNG, GIF, BMP, or TIFF. Our tool outputs JPG by default for best compatibility.</p></div>
       </div>
       
       <div class="faq-item">
-        <button class="faq-q">How many photos can I add to an eBay listing?</button>
-        <div class="faq-a"><p>eBay allows up to 24 photos per listing. Use multiple angles and detail shots to increase buyer confidence.</p></div>
+        <button class="faq-q" data-zh="一个 eBay 商品可以加几张照片？">How many photos can I add to an eBay listing?</button>
+        <div class="faq-a"><p data-zh="eBay 每个商品最多可加 24 张照片。使用多个角度和细节图可增强买家信心。">eBay allows up to 24 photos per listing. Use multiple angles and detail shots to increase buyer confidence.</p></div>
       </div>
     </div>
   </div>
@@ -228,28 +238,32 @@
 <section style="background: var(--bg-soft); padding: 60px 0;">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">More image tools</h2>
+      <h2 class="section-title" data-zh="更多图片工具">More image tools</h2>
     </div>
     <div class="tool-grid">
+      
       <a href="amazon-image-size-converter.html" class="tool-card">
         <div class="tool-icon">🛒</div>
-        <h3>Amazon Resizer</h3>
-        <p>2000×2000 px main images.</p>
+        <h3 data-zh="亚马逊调整器">Amazon Resizer</h3>
+        <p data-zh="2000×2000 像素主图。">2000×2000 px main images.</p>
       </a>
+      
       <a href="shopify-image-optimizer.html" class="tool-card">
         <div class="tool-icon">🛍️</div>
-        <h3>Shopify Optimizer</h3>
-        <p>Faster store loading.</p>
+        <h3 data-zh="Shopify 优化器">Shopify Optimizer</h3>
+        <p data-zh="加快店铺加载速度。">Faster store loading.</p>
       </a>
+      
       <a href="instagram-post-size.html" class="tool-card">
         <div class="tool-icon">📸</div>
-        <h3>Instagram Size</h3>
-        <p>Square, portrait, story.</p>
+        <h3 data-zh="Instagram 尺寸">Instagram Size</h3>
+        <p data-zh="方形、竖图、故事。">Square, portrait, story.</p>
       </a>
+      
       <a href="youtube-thumbnail-size.html" class="tool-card">
         <div class="tool-icon">▶️</div>
-        <h3>YouTube Thumbnail</h3>
-        <p>1280×720 px thumbnails.</p>
+        <h3 data-zh="YouTube 缩略图">YouTube Thumbnail</h3>
+        <p data-zh="1280×720 像素缩略图。">1280×720 px thumbnails.</p>
       </a>
     </div>
   </div>
@@ -263,49 +277,50 @@
           <span class="logo-icon">IF</span>
           <span>ImageFitly</span>
         </div>
-        <p>The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
+        <p data-zh="面向电商卖家与内容创作者的免费、隐私、浏览器端图片工具箱。">The free, private, browser-based image toolkit for e-commerce sellers and content creators.</p>
       </div>
       <div>
-        <h5>E-commerce</h5>
+        <h5 data-zh="电商">E-commerce</h5>
         <ul>
-          <li><a href="amazon-image-size-converter.html">Amazon</a></li>
-          <li><a href="shopify-image-optimizer.html">Shopify</a></li>
-          <li><a href="etsy-photo-resize.html">Etsy</a></li>
-          <li><a href="ebay-image-compressor.html">eBay</a></li>
+          <li><a href="amazon-image-size-converter.html" data-zh="亚马逊">Amazon</a></li>
+          <li><a href="shopify-image-optimizer.html" data-zh="Shopify">Shopify</a></li>
+          <li><a href="etsy-photo-resize.html" data-zh="Etsy">Etsy</a></li>
+          <li><a href="ebay-image-compressor.html" data-zh="eBay">eBay</a></li>
         </ul>
       </div>
       <div>
-        <h5>Social Media</h5>
+        <h5 data-zh="社交媒体">Social Media</h5>
         <ul>
-          <li><a href="instagram-post-size.html">Instagram</a></li>
-          <li><a href="youtube-thumbnail-size.html">YouTube</a></li>
-          <li><a href="linkedin-banner-size.html">LinkedIn</a></li>
-          <li><a href="twitter-header-size.html">Twitter</a></li>
+          <li><a href="instagram-post-size.html" data-zh="Instagram">Instagram</a></li>
+          <li><a href="youtube-thumbnail-size.html" data-zh="YouTube">YouTube</a></li>
+          <li><a href="linkedin-banner-size.html" data-zh="LinkedIn">LinkedIn</a></li>
+          <li><a href="twitter-header-size.html" data-zh="Twitter">Twitter</a></li>
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h5 data-zh="公司">Company</h5>
         <ul>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../privacy.html">Privacy</a></li>
-          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="../about.html" data-zh="关于">About</a></li>
+          <li><a href="../contact.html" data-zh="联系我们">Contact</a></li>
+          <li><a href="../privacy.html" data-zh="隐私政策">Privacy</a></li>
+          <li><a href="../terms.html" data-zh="服务条款">Terms</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 ImageFitly. All rights reserved.</span>
-      <span>Made with ❤️ for creators worldwide</span>
+      <span data-zh="© 2026 ImageFitly. 版权所有。">© 2026 ImageFitly. All rights reserved.</span>
+      <span data-zh="为全球创作者用心打造 ❤️">Made with ❤️ for creators worldwide</span>
     </div>
   </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/i18n.js"></script>
 <script src="../js/image-engine.js"></script>
 <script src="../js/tool-page.js"></script>
 <script>
   const toolConfig = {
-    presets: [{"label":"eBay Square","w":1600,"h":1600,"fit":"contain"},{"label":"eBay Recommended","w":1000,"h":1000,"fit":"contain"},{"label":"eBay Thumbnail","w":500,"h":500,"fit":"contain"},{"label":"Custom Size","w":1000,"h":1000,"fit":"contain"}],
+    presets: [{"label":"eBay Square","labelZh":"eBay 方形图","w":1600,"h":1600,"fit":"contain"},{"label":"eBay Recommended","labelZh":"eBay 推荐","w":1000,"h":1000,"fit":"contain"},{"label":"eBay Thumbnail","labelZh":"eBay 缩略图","w":500,"h":500,"fit":"contain"},{"label":"Custom Size","labelZh":"自定义尺寸","w":1000,"h":1000,"fit":"contain"}],
     defaultPreset: 0,
     defaultFormat: 'image/jpeg',
     defaultQuality: 0.8,
@@ -313,20 +328,6 @@
   };
   document.addEventListener('DOMContentLoaded', () => {
     new ToolPage(toolConfig);
-    // Override preset click to set width/height
-    document.querySelectorAll('.preset-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const idx = parseInt(btn.dataset.idx);
-        const p = toolConfig.presets[idx];
-        if (p.w) {
-          document.getElementById('widthInput').value = p.w;
-          document.getElementById('heightInput').value = p.h;
-          document.getElementById('fitSelect').value = p.fit;
-        }
-        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
   });
 </script>
 

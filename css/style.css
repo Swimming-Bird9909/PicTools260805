@@ -668,6 +668,31 @@ section {
   color: var(--text-muted);
 }
 
+/* Persistent "click to replace" hint below the preview (always visible once an image is loaded) */
+.replace-link {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--gradient-soft);
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.editor.active .replace-link {
+  display: inline-flex;
+}
+
+.replace-link:hover {
+  border-color: var(--primary);
+  background: #eef2ff;
+}
+
 .controls {
   background: var(--bg-soft);
   border-radius: var(--radius-lg);

@@ -56,6 +56,7 @@ class ToolPage {
     this.previewCanvasBox = document.getElementById("previewCanvasBox");
     this.previewBadge = document.getElementById("previewBadge");
     this.previewZoom = document.getElementById("previewZoom");
+    this.replaceLink = document.getElementById("replaceLink");
     this.presetGrid = document.getElementById("presetGrid");
     this.widthInput = document.getElementById("widthInput");
     this.heightInput = document.getElementById("heightInput");
@@ -127,6 +128,14 @@ class ToolPage {
     // Click the preview image to replace it with another file
     if (this.previewCanvasBox) {
       this.previewCanvasBox.addEventListener("click", () => this.openFilePicker());
+    }
+    // Persistent "click image to replace" link below the preview
+    if (this.replaceLink) {
+      this.replaceLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.openFilePicker();
+      });
     }
   }
 

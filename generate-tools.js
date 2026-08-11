@@ -629,6 +629,7 @@ function renderPage(tool) {
             <div class="preview-meta">
               <span class="preview-badge" id="previewBadge" data-zh="上传图片以预览">Upload an image to preview</span>
               <span class="preview-zoom" id="previewZoom"></span>
+              <button type="button" class="replace-link" id="replaceLink" data-zh="点击图片可替换 ↺">Click image to replace ↺</button>
             </div>
           </div>
           <div class="controls">

@@ -624,6 +624,7 @@ function renderPage(tool) {
           <div class="preview-wrap" id="previewWrap">
             <div class="preview-canvas-box" id="previewCanvasBox">
               <img id="previewImg" alt="Preview" />
+              <div class="replace-hint" data-zh="点击替换图片">Click to replace image</div>
             </div>
             <div class="preview-meta">
               <span class="preview-badge" id="previewBadge" data-zh="上传图片以预览">Upload an image to preview</span>

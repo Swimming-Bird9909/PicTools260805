@@ -123,6 +123,11 @@ class ToolPage {
     if (this.bgRemoveBtn) {
       this.bgRemoveBtn.addEventListener("click", () => this.runBgRemoval());
     }
+
+    // Click the preview image to replace it with another file
+    if (this.previewCanvasBox) {
+      this.previewCanvasBox.addEventListener("click", () => this.openFilePicker());
+    }
   }
 
   renderPresets() {
@@ -163,6 +168,12 @@ class ToolPage {
     this.qualityVal.textContent = Math.round(this.state.quality * 100) + "%";
   }
 
+  openFilePicker() {
+    if (!this.fileInput) return;
+    this.fileInput.value = ""; // allow re-selecting the same file
+    this.fileInput.click();
+  }
+
   async handleFile(file) {
     if (!file) return;
     if (file.size > this.config.maxFileSizeMB * 1024 * 1024) {
@@ -173,6 +184,7 @@ class ToolPage {
       const { img, file: f } = await ImageEngine.loadFile(file);
       this.state.img = img;
       this.state.file = f;
+      this.output = null;
       this.previewImg.src = img.src;
       this.updatePreviewDisplay(img.naturalWidth || img.width, img.naturalHeight || img.height, "Original");
       this.fileInfo.textContent = `${f.name} \u2022 ${ImageEngine.formatBytes(f.size)} \u2022 ${img.width}\u00d7${img.height}px`;

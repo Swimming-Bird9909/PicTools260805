@@ -594,6 +594,7 @@ section {
 }
 
 .preview-canvas-box {
+  position: relative;
   border: 2px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
@@ -604,6 +605,11 @@ section {
   justify-content: center;
   transition: all 0.25s ease;
   max-width: 100%;
+  cursor: pointer;
+}
+
+.preview-canvas-box:hover {
+  border-color: var(--primary);
 }
 
 .preview-canvas-box img,
@@ -614,6 +620,28 @@ section {
   object-fit: contain;
   /* JS inline style controls actual display width/height */
   transition: width 0.25s ease, height 0.25s ease;
+}
+
+.replace-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: rgba(15, 23, 42, 0.55);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+
+.editor.active .preview-canvas-box:hover .replace-hint {
+  opacity: 1;
 }
 
 .preview-meta {

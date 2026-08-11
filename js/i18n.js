@@ -67,7 +67,7 @@
 
   function applyTo(el) {
     var isHtml = el.hasAttribute('data-zh-html');
-    var zh = el.getAttribute('data-zh');
+    var zh = isHtml ? el.getAttribute('data-zh-html') : el.getAttribute('data-zh');
 
     if (el.tagName === 'META') {
       if (lang === 'zh' && zh != null) el.setAttribute('content', zh);
@@ -83,9 +83,27 @@
     if (lang === 'zh' && zh != null) {
       if (isHtml) el.innerHTML = zh;
       else el.textContent = zh;
+      // also translate placeholder / aria-label
+      if (zh && el.getAttribute('placeholder') !== null && !el.hasAttribute('data-zh-placeholder-done')) {
+        el._enPlaceholder = el.getAttribute('placeholder');
+        el.setAttribute('placeholder', zh);
+        el.setAttribute('data-zh-placeholder-done', '');
+      }
+      if (zh && el.getAttribute('aria-label') !== null && !el.hasAttribute('data-zh-aria-done')) {
+        el._enAriaLabel = el.getAttribute('aria-label');
+        el.setAttribute('aria-label', zh);
+        el.setAttribute('data-zh-aria-done', '');
+      }
     } else if (el._enVal != null) {
       if (isHtml) el.innerHTML = el._enVal;
       else el.textContent = el._enVal;
+      // restore original placeholder / aria-label
+      if (el._enPlaceholder != null) {
+        el.setAttribute('placeholder', el._enPlaceholder);
+      }
+      if (el._enAriaLabel != null) {
+        el.setAttribute('aria-label', el._enAriaLabel);
+      }
     }
   }
 

@@ -639,8 +639,8 @@ function renderPage(tool) {
             <h4 data-zh="自定义尺寸">Custom Dimensions</h4>
             <div class="control-group">
               <div class="input-row">
-                <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" />
-                <input type="number" id="heightInput" min="1" max="8000" placeholder="Height" />
+                <input type="number" id="widthInput" min="1" max="8000" placeholder="Width" data-zh="宽度" />
+                <input type="number" id="heightInput" min="1" max="8000" placeholder="Height" data-zh="高度" />
               </div>
             </div>
 

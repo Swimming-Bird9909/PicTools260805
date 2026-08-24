@@ -163,7 +163,22 @@ ARTICLES.forEach(article => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${article.title} — ImageFitly Blog</title>
   <meta name="description" content="${article.desc}" />
-  <link rel="canonical" href="https://imagefitly.com/blog/${article.slug}.html" />
+  <link rel="canonical" href="https://tools.wezzik.com/blog/${article.slug}.html" />
+  <meta property="og:title" content="${article.title} — ImageFitly Blog" />
+  <meta property="og:description" content="${article.desc}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tools.wezzik.com/blog/${article.slug}.html" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": ${JSON.stringify(article.title)},
+    "description": ${JSON.stringify(article.desc)},
+    "url": "https://tools.wezzik.com/blog/${article.slug}.html",
+    "publisher": { "@type": "Organization", "name": "ImageFitly" }
+  }
+  </script>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial' font-weight='900'%3EIF%3C/text%3E%3C/svg%3E" />
 </head>

@@ -540,11 +540,11 @@ function renderPage(tool) {
   <meta name="description" content="${tool.desc}" data-zh="${tool.desc}" />
   <meta name="keywords" content="${tool.keywords}" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://imagefitly.com/tools/${tool.slug}.html" />
+  <link rel="canonical" href="https://tools.wezzik.com/tools/${tool.slug}.html" />
   <meta property="og:title" content="${tool.title}" data-zh="${tool.h1Zh} | ImageFitly" />
   <meta property="og:description" content="${tool.desc}" data-zh="${tool.desc}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://imagefitly.com/tools/${tool.slug}.html" />
+  <meta property="og:url" content="https://tools.wezzik.com/tools/${tool.slug}.html" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial' font-weight='900'%3EIF%3C/text%3E%3C/svg%3E" />
   <script type="application/ld+json">

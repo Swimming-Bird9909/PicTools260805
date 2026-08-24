@@ -986,6 +986,28 @@ section {
   color: #64748b;
 }
 
+/* Page-view counter (bottom of every page) */
+.site-counter {
+  display: none; /* shown by counter.js once data loads */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #1e293b;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.site-counter .counter-item strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.site-counter .counter-sep {
+  opacity: 0.4;
+}
+
 /* ============================================
    Content (Blog / Articles)
    ============================================ */

@@ -783,6 +783,7 @@ function renderPage(tool) {
       <span data-zh="© 2026 ImageFitly. 版权所有。">© 2026 ImageFitly. All rights reserved.</span>
       <span data-zh="为全球创作者用心打造 ❤️">Made with ❤️ for creators worldwide</span>
     </div>
+    <div class="site-counter" id="site-counter"></div>
   </div>
 </footer>
 
@@ -802,6 +803,8 @@ function renderPage(tool) {
     new ToolPage(toolConfig);
   });
 </script>
+<script src="../js/counter-config.js"></script>
+<script src="../js/counter.js"></script>
 
 </body>
 </html>`;

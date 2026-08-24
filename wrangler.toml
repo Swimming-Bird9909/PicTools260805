@@ -1,0 +1,10 @@
+name = "imagefitly-counter"
+main = "counter-worker.js"
+compatibility_date = "2024-09-23"
+
+# Bind a KV namespace named COUNTER_KV to this worker.
+# First create the namespace:  wrangler kv namespace create COUNTER_KV
+# Then paste the returned id into the line below.
+[[kv_namespaces]]
+binding = "COUNTER_KV"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"

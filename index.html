@@ -18,16 +18,17 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ImageFitly",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Free online image resizer, compressor, and background remover. No upload required."
+    "@graph": [
+      {"@type":"Organization","@id":"https://tools.wezzik.com/#organization","name":"ImageFitly","url":"https://tools.wezzik.com/","parentOrganization":{"@id":"https://wezzik.com/#organization"}},
+      {"@type":"WebSite","@id":"https://tools.wezzik.com/#website","name":"ImageFitly","url":"https://tools.wezzik.com/","publisher":{"@id":"https://tools.wezzik.com/#organization"}},
+      {"@type":"WebApplication","@id":"https://tools.wezzik.com/#application","name":"ImageFitly","url":"https://tools.wezzik.com/","applicationCategory":"MultimediaApplication","operatingSystem":"Any","isAccessibleForFree":true,"provider":{"@id":"https://tools.wezzik.com/#organization"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free browser-based image resizer, compressor, converter, and background remover for online sellers and creators."},
+      {"@type":"FAQPage","@id":"https://tools.wezzik.com/#faq","mainEntity":[
+        {"@type":"Question","name":"Is ImageFitly really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. ImageFitly is free, has no watermarks, and requires no account."}},
+        {"@type":"Question","name":"Are my images uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Image processing happens directly in your browser, so your images do not leave your device."}},
+        {"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"JPG, PNG, WEBP, GIF, and BMP are supported as input. Results can be exported as JPG, PNG, or WEBP."}},
+        {"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No account is needed. Open a tool and start processing immediately."}}
+      ]}
+    ]
   }
   </script>
 </head>

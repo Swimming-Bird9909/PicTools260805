@@ -1,0 +1,30 @@
+# ImageFitly
+
+> ImageFitly is a browser-based image utility site for resizing, compressing, converting and preparing images for online marketplaces and social platforms.
+
+## Canonical site
+
+- Homepage: https://tools.wezzik.com/
+- Product guide and processing boundaries: https://tools.wezzik.com/product-guide.html
+- Tool directory: https://tools.wezzik.com/#tools
+- Blog: https://tools.wezzik.com/blog/
+
+## What the site does
+
+- Provides image size presets for Amazon, Shopify, Etsy, eBay, Instagram, YouTube, LinkedIn, X and Facebook.
+- Provides browser-based resizing, compression and format conversion for common image files.
+- Provides a background-removal tool whose model resources may need to load over the network.
+- Does not require an account for the public tools.
+
+## Important accuracy and privacy notes
+
+- Routine resizing, compression and format conversion use browser-side processing for the selected image.
+- Background-removal processing can load external scripts or model resources; this is not the same claim as saying that every feature is entirely offline.
+- Output size, image quality and platform acceptance are not guaranteed for every file. Users should check the downloaded result and keep the original.
+- For sensitive images, users should read the product guide and verify the current network and processing path before use.
+
+## Related Wezzik products
+
+- PDF tools: https://wezzik.com/
+- Unit conversion: https://convert.wezzik.com/
+- Image repair: https://wipeai.wezzik.com/

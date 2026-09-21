@@ -707,7 +707,7 @@ function renderPage(tool) {
       <h2 data-zh="为什么选择 ImageFitly？">Why use ImageFitly?</h2>
       <ul>
         <li><strong data-zh="100% 免费">100% Free</strong> <span data-zh="—— 无隐藏费用、无水印、无需注册。">— No hidden costs, no watermarks, no sign-up required.</span></li>
-        <li><strong data-zh="浏览器端">Browser-based</strong> <span data-zh="—— 图片在本地处理，不会上传到任何服务器。">— Your images are processed locally. Nothing is uploaded to any server.</span></li>
+        <li><strong data-zh="浏览器端">Browser-based</strong> <span data-zh="—— 常规图片处理在本地完成；背景处理请查看处理说明。">— Routine image processing runs locally; see the processing guide for background removal.</span></li>
         <li><strong data-zh="极速">Fast</strong> <span data-zh="—— 利用设备原生算力，几秒完成处理。">— Process images in seconds using your device's native speed.</span></li>
         <li><strong data-zh="多格式">Multiple formats</strong> <span data-zh="—— 可导出 JPG、PNG 或 WEBP，质量可调。">— Export to JPG, PNG, or WEBP with adjustable quality.</span></li>
         <li><strong data-zh="自定义尺寸">Custom dimensions</strong> <span data-zh="—— 使用预设或输入任意宽高。">— Use presets or enter any custom width and height.</span></li>
